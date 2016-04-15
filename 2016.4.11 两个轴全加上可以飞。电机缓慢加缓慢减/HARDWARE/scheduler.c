@@ -70,7 +70,7 @@ void Loop_500Hz()	//2ms执行一次
 
 void Loop_200Hz() //5ms执行一次
 {	
-	inv_mpu_read();
+//	inv_mpu_read();
 		//		NRF_UART_Connect();		//专用上位机数据传输	
 }
 
@@ -149,7 +149,7 @@ void Loop_10Hz()  //100ms执行一次
 {
 	ANO_DT_Send_Status(sen.angle.roll,sen.angle.pitch,sen.angle.yaw,0,0,stop);
 	
-	ANO_DT_Send_Senser(sen.accel.x,sen.accel.y,sen.accel.z,sen.gyro.x,sen.gyro.y,sen.gyro.z,PID_Pitch.Pout_In,PID_Pitch.Iout_In,PID_Pitch.Dout_In,0);
+	ANO_DT_Send_Senser(sen.accel.x,sen.accel.y,sen.accel.z,sen.gyro.x,sen.gyro.y,sen.gyro.z,0,0,0,0);
 
 	ANO_DT_Send_MotoPWM(throttle1,throttle2,throttle3,throttle4,0,0,0,0);		//发送电机油门到匿名上位机
 }

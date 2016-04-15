@@ -93,17 +93,17 @@ void FlyControl_Roll(float _gyro_x,float _angle_roll)
 
 void Pid_Init()
 {
-	PID_Pitch.Kp_I = 1.5;
-	PID_Pitch.Ki_I = 0.20;
-	PID_Pitch.Kd_I = 3;
+	PID_Pitch.Kp_I = 1.2;// 1.5;
+	PID_Pitch.Ki_I = 1;//0.20;
+	PID_Pitch.Kd_I = 1.5;//3;
 	
 	PID_Pitch.Kp_O = 3;
 	PID_Pitch.Ki_O = 0;
 	PID_Pitch.Kd_O = 0;
 	
-	PID_Roll.Kp_I = 1.5;
-	PID_Roll.Ki_I = 0.20;
-	PID_Roll.Kd_I = 3;
+	PID_Roll.Kp_I = 1.2;// 1.5;
+	PID_Roll.Ki_I = 1;//0.20;
+	PID_Roll.Kd_I = 1.5;//3;
 	
 	PID_Roll.Kp_O = 3;
 	PID_Roll.Ki_O = 0;

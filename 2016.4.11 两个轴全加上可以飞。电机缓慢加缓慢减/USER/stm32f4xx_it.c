@@ -30,6 +30,7 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_it.h"
 #include "pid.h"
+#include "main.h"
 /** @addtogroup Template_Project
   * @{
   */
@@ -169,6 +170,7 @@ void TIM4_IRQHandler(void)
 {
 	if(TIM_GetITStatus(TIM4,TIM_IT_Update)==SET) //溢出中断
 	{
+		inv_mpu_read();
 		CONTROL();//电机控制
 	}
 	TIM_ClearITPendingBit(TIM4,TIM_IT_Update);  //清除中断标志位
